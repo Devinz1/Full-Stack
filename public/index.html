@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app='FullStax'>
+<head>
+	<title>FullStax</title>
+</head>
+<body ng-controller='MainController'>
+	
+
+
+	<div>
+  		<button ng-click='getFriends()'>Get Friends</button>
+  		<ul ng-repeat='friends in friends'>
+  			<li>name: {{friends.name}}</li>
+  			<li>age:{{friends.age}}</li>
+  			<li>when we met: {{friends.yearMet}}</li>
+  		</ul>	
+  		<form ng-submit='addFriend()'>
+  		Name:<input type='add name' ng-model='name'/>
+  		Age:<input type='add age' ng-model='age'/>
+  		Activity:<input type='add activity' ng-model='acitvities'/>
+
+	</div>	
+
+	<div class ='display-inline'>
+  		<button ng-click='getFamily()'>Get Family</button>
+  		<ul ng-repeat='family in family'>
+  			<li>name: {{family.name}}</li>
+  			<li>age: {{family.age}}</li>
+  			<li>relationship: {{family.realatonship}}</li>
+  		</ul>	
+	</div>	
+
+	<div class ='display-inline'>
+  		<button ng-click='getActivities()'>Get Activities</button>
+  		<ul ng-repeat='activities in activities'>
+  			<li>name: {{activities.name}}</li>
+  			<li>age: {{activities.age}}</li>
+  			<li>height: {{activities.height}}</li>
+  			<li>movie: {{activities.movie}}</li>
+  			<li>artist: {{activities.artist}}</li>
+  			<li>food: {{activities.food}}</li>
+  		</ul>	
+	</div>	
+
+	<div class = 'display-inline'>
+  		<button>Get Personal Information</button>
+	</div>	
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js'></script>
+<script src='js/app.js'></script>
+<script src='js/myCtrl.js'></script>
+<script src='js/myService.js'></script>
+
+</body>
+</html>
